@@ -1,0 +1,49 @@
+/* Pour le conteneur global des cartes */
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Styles pour une seule carte */
+.card {
+  width: 200px; /* Ajustez la largeur selon vos besoins */
+  border: 1px solid #ccc;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Image du Pokémon */
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Numéro du Pokémon */
+.card p {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+/* Nom du Pokémon */
+.card h2 {
+  margin: 10px 0;
+  font-size: 1.4em;
+}
+
+/* Conteneur pour les types */
+.card div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Un seul type */
+.card div div {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
