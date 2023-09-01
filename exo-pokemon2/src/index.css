@@ -1,49 +1,198 @@
-/* Pour le conteneur global des cartes */
-.pokedex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+:root {
+  --clr-black: #1c1c1c;
+  --clr-gray: #ececec;
+  --clr-white: #f7f7f7;
+
+  --type-normal: #a8a878;
+  --type-fire: #f08030;
+  --type-water: #6890f0;
+  --type-grass: #78c850;
+  --type-electric: #f8d030;
+  --type-ice: #98d8d8;
+  --type-fighting: #c03028;
+  --type-poison: #a040a0;
+  --type-ground: #e0c068;
+  --type-flying: #a890f0;
+  --type-psychic: #f85888;
+  --type-bug: #a8b820;
+  --type-rock: #b8a038;
+  --type-ghost: #705898;
+  --type-dark: #705848;
+  --type-dragon: #7038f8;
+  --type-steel: #b8b8d0;
+  --type-fairy: #f0b6bc;
 }
 
-/* Styles pour une seule carte */
-.card {
-  width: 200px; /* Ajustez la largeur selon vos besoins */
-  border: 1px solid #ccc;
-  margin: 20px;
-  border-radius: 10px;
-  overflow: hidden;
+body {
+  display: flex;
   text-align: center;
-}
-
-/* Image du Pokémon */
-.card img {
-  width: 100%;
-  height: auto;
-}
-
-/* Numéro du Pokémon */
-.card p {
-  margin: 10px 0;
-  font-size: 1.2em;
-}
-
-/* Nom du Pokémon */
-.card h2 {
-  margin: 10px 0;
-  font-size: 1.4em;
-}
-
-/* Conteneur pour les types */
-.card div {
-  display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  margin: 0 auto;
+  width: 90%;
+
+  background-color: rgb(214, 220, 231);
+  background-image: url("https://js-pokedex-virid.vercel.app/src/pokeball-icon.png");
+
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
 }
 
-/* Un seul type */
-.card div div {
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+input {
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.card {
+  flex: 1 0 20%;
+  margin: 10px;
+  padding: 20px 20px 0;
+  text-align: center;
+  border-radius: 20px;
+  background: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 0 1px 6px rgba(51, 51, 51, 0.192);
+  min-height: 260px;
+  display: grid;
+  overflow: hidden;
+}
+
+p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #d2e0ef;
+}
+
+.abilities {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #e8edf3;
+}
+
+.types {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.type-box {
+  padding: 5px 10px;
+  border-radius: 10px; /* ajustez cette valeur selon vos préférences */
+  color: black; /* Couleur du texte, peut être ajustée */
+}
+
+button {
+  font-size: 1.8rem;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.fire {
+  background-color: var(--type-fire);
+  color: var(--clr-black);
+}
+
+.water {
+  background-color: var(--type-water);
+  color: var(--clr-black);
+}
+
+.grass {
+  background-color: var(--type-grass);
+  color: var(--clr-black);
+}
+
+.electric {
+  background-color: var(--type-electric);
+  color: var(--clr-black);
+}
+
+.ice {
+  background-color: var(--type-ice);
+  color: var(--clr-black);
+}
+
+.fighting {
+  background-color: var(--type-fighting);
+  color: var(--clr-black);
+}
+
+.poison {
+  background-color: var(--type-poison);
+  color: var(--clr-black);
+}
+
+.ground {
+  background-color: var(--type-ground);
+  color: var(--clr-black);
+}
+
+.flying {
+  background-color: var(--type-flying);
+  color: var(--clr-black);
+}
+
+.psychic {
+  background-color: var(--type-psychic);
+  color: var(--clr-black);
+}
+
+.bug {
+  background-color: var(--type-bug);
+  color: var(--clr-black);
+}
+
+.rock {
+  background-color: var(--type-rock);
+  color: var(--clr-black);
+}
+
+.ghost {
+  background-color: var(--type-ghost);
+  color: var(--clr-black);
+}
+
+.dark {
+  background-color: var(--type-dark);
+  color: var(--clr-black);
+}
+
+.dragon {
+  background-color: var(--type-dragon);
+  color: var(--clr-black);
+}
+
+.steel {
+  background-color: var(--type-steel);
+  color: var(--clr-black);
+}
+
+.fairy {
+  background-color: var(--type-fairy);
+  color: var(--clr-black);
+}
+
+.normal {
+  background-color: var(--type-normal);
+  color: var(--clr-black);
 }

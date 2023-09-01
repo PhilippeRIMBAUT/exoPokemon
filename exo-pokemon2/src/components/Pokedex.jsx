@@ -9,7 +9,7 @@ const Pokedex = () => {
   const filteredPokemons = pokemons.filter((pokemon) => pokemon.name.toLowerCase().includes(searchValue.toLocaleLowerCase()));
 
   useEffect(() => {
-    axios.get(`https://pokeapi.co/api/v2/pokemon?limit=100000&offset=${offset}`).then((res) => {
+    axios.get(`https://pokeapi.co/api/v2/pokemon?limit=50&offset=${offset}`).then((res) => {
       setPokemons((prevPokemons) => [...prevPokemons, ...res.data.results]);
     });
   }, [offset]);
@@ -22,7 +22,10 @@ const Pokedex = () => {
     <div className="pokedex">
       <div className="input">
         <input type="text" placeholder="Entrez le nom d'un Pokemon" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
-        {searchValue ? filteredPokemons.map((pokemon, index) => <Cards key={index} url={pokemon.url} />) : pokemons.map((pokemon, index) => <Cards key={index} url={pokemon.url} />)}
+
+        <div className="card-container">
+          {searchValue ? filteredPokemons.map((pokemon, index) => <Cards key={index} url={pokemon.url} />) : pokemons.map((pokemon, index) => <Cards key={index} url={pokemon.url} />)}
+        </div>
       </div>
 
       <div>
